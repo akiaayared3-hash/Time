@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Base Content Setup */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbf9f6; /* Matching signature cream background */
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Common Typography Elements */
+.sub-heading {
+  font-size: 12px;
+  font-weight: 700;
+  color: #b81d1d; /* Signature red */
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 40px 0;
+}
+
+/* ==========================================================================
+   Section 1: Story Block Layout
+   ========================================================================== */
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.story-content {
+  padding-right: 20px;
+}
+
+.story-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.story-image-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-image-box:hover .featured-img {
+  transform: scale(1.03);
+}
+
+/* Decorative Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #eadecc;
+  margin: 60px 0;
+}
+
+/* ==========================================================================
+   Section 2: Values Block Layout
+   ========================================================================== */
+.center-title {
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.value-card {
+  background-color: #ffffff;
+  border: 1px solid #e6dfd5;
+  border-radius: 6px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.value-icon-circle {
+  width: 75px;
+  height: 75px;
+  background-color: #fdfaf4;
+  border: 1px solid #eadecc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+  transition: all 0.3s ease;
+}
+
+.value-icon-circle img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.value-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.value-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+}
+
+/* Value Cards Hover Effect */
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: #c59d4f; /* Accent Gold */
+  box-shadow: 0 12px 30px rgba(197, 157, 79, 0.12);
+}
+
+.value-card:hover .value-icon-circle {
+  border-color: #c59d4f;
+  background-color: #c59d4f;
+}
+
+.value-card:hover .value-icon-circle img {
+  filter: brightness(0) invert(1); /* Flips icon to white on hover */
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 992px) {
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-content {
+    padding-right: 0;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .value-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 40px 15px;
+  }
+
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}

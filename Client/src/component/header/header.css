@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Preserved Existing Header Configuration Styles
+   ========================================================================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.custom-header {
+    border-bottom: 1px solid #1c1c1c;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Original Clock Logo Components */
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+}
+
+.logo-clock-top {
+    width: 36px;
+    height: 18px;
+    border: 2px solid #c59d4f;
+    border-bottom: none;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    position: absolute;
+    top: -10px;
+}
+
+.clock-pin {
+    width: 2px;
+    height: 8px;
+    background-color: #c59d4f;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 6px;
+}
+
+.logo-subtitle {
+    font-size: 9px;
+    font-weight: 700;
+    color: #c59d4f;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+/* Navigation Links layout styling */
+.custom-nav-links .nav-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    transition: color 0.2s ease;
+}
+
+.custom-nav-links .nav-link:hover, 
+.custom-nav-links .nav-link.active {
+    color: #c59d4f !important;
+}
+
+/* Icons and Order Button Base Setup */
+.nav-icon-link {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    color: #c59d4f;
+}
+
+.header-cart-badge {
+    font-size: 9px;
+    padding: 3px 6px;
+}
+
+.btn-gold {
+    background-color: #c59d4f;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-gold:hover {
+    background-color: #a8843b;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   New Fixed Search Bar & Account Profile Logic additions
+   ========================================================================== */
+.header-search-container {
+    width: 200px;
+}
+
+.search-input-field {
+    background-color: #111111;
+    border: 1px solid #2d2d2d;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 35px 6px 14px;
+}
+
+.search-input-field:focus {
+    background-color: #1a1a1a;
+    border-color: #c59d4f;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.search-submit-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-submit-btn:hover {
+    color: #c59d4f;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .mobile-action-group {
+        z-index: 1050;
+    }
+}

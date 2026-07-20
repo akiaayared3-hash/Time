@@ -1,0 +1,225 @@
+:root {
+    --gold-color: #e5a913;
+    --gold-hover: #c9920f;
+    --text-muted: #a6a6a6;
+    --site-font: 'Montserrat', sans-serif;
+}
+
+/* --- Footer Area Styling --- */
+.custom-footer {
+    background-color: #000000;
+    border-top: 1px solid #1a1a1a;
+    font-family: var(--site-font);
+}
+
+/* --- THE EXACT LOGO DESIGN REPLICA (SAME AS HEADER) --- */
+.logo-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    line-height: 1;
+    text-decoration: none;
+    /* Aligns block elements neatly across columns depending on text breaks */
+    align-items: center; 
+}
+
+@media (min-width: 768px) {
+    .logo-wrapper {
+        align-items: flex-start; /* Left aligns the logo structural block on desktop */
+    }
+}
+
+/* Golden semi-circle clock wrapper arc styling */
+.logo-clock-top {
+    width: 32px;
+    height: 16px;
+    border: 2px solid var(--gold-color);
+    border-bottom: none;
+    border-radius: 32px 32px 0 0;
+    position: relative;
+    margin-bottom: -1px;
+}
+
+/* Fix desktop left alignment override for the top arc */
+@media (min-width: 768px) {
+    .logo-clock-top {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Golden crown accent button piece on top of the arc */
+.clock-pin {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: var(--gold-color);
+    border-radius: 50%;
+}
+
+/* Inside watch hands simulation pointing down */
+.logo-clock-top::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 6px;
+    background-color: var(--gold-color);
+}
+
+/* Main typography stack grid spacing for TIME font */
+.logo-title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+/* Geometric custom matching lines configuration for the design's unique 'E' */
+.logo-title .custom-e {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18px;
+    height: 16px;
+    margin-left: 2px;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    position: relative;
+}
+
+.logo-title .custom-e::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Golden subtitle description grid line formatting */
+.logo-subtitle {
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: var(--gold-color) !important;
+    margin-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 3px;
+    width: 100%;
+    text-align: center;
+}
+/* --- End Logo CSS --- */
+
+
+.footer-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.highlight-gold {
+    color: var(--gold-color);
+}
+
+.fill-icon {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Links structure layout formatting */
+.footer-links-list li {
+    margin-bottom: 8px;
+}
+
+.footer-links-list a {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links-list a:hover {
+    color: var(--gold-color);
+}
+
+/* Social Media Icons grid links formatting */
+.footer-socials a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-socials a:hover {
+    color: var(--gold-color);
+}
+
+/* Newsletter block alignment sizing */
+.footer-newsletter-form {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .footer-newsletter-form {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.footer-newsletter-form .form-control {
+    background-color: #ffffff;
+    border: none;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-newsletter-form .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.footer-newsletter-form .btn-gold {
+    border-radius: 0 4px 4px 0;
+    padding: 10px 18px;
+    color: #000;
+    background-color: var(--gold-color);
+    border: none;
+}
+
+.footer-newsletter-form .btn-gold:hover {
+    background-color: var(--gold-hover);
+}
+
+/* Structural Divider line layout styling */
+.footer-divider {
+    border-color: #2b2b2b;
+    opacity: 1;
+}
+
+.copyright-text {
+    font-size: 0.7rem;
+    color: #666666;
+    letter-spacing: 0.5px;
+}
