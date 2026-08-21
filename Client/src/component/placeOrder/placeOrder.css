@@ -1,0 +1,221 @@
+.place-order-container{
+
+    max-width:900px;
+    margin:80px auto;
+    padding:20px;
+
+}
+
+
+.place-order-card{
+
+    background:#fff;
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+.place-order-card h1{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:32px;
+
+    color:#111;
+
+}
+
+
+.place-order-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+.form-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+.form-group label{
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    border-color:#c59d4f;
+
+}
+
+
+textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+.place-order-btn{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#b81d1d;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.place-order-btn:hover{
+
+    background:#911515;
+
+}
+
+
+/* Tablet */
+
+@media(max-width:768px){
+
+    .place-order-container{
+
+        margin:40px auto;
+
+    }
+
+
+    .place-order-card{
+
+        padding:25px;
+
+    }
+
+
+    .form-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .place-order-card h1{
+
+        font-size:26px;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:480px){
+
+    .place-order-container{
+
+        padding:15px;
+
+    }
+
+
+    .place-order-card{
+
+        padding:20px;
+
+    }
+
+
+    .place-order-card h1{
+
+        font-size:22px;
+
+    }
+
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select{
+
+        font-size:14px;
+
+    }
+
+
+    .place-order-btn{
+
+        font-size:15px;
+
+    }
+
+}

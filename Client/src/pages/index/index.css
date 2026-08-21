@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-cream: #fbf9f5;
+  --color-gold: #cca03a;
+  --color-gold-hover: #b0872e;
+  --color-red: #b81d1d;
+  --color-red-hover: #961515;
+  --color-dark: #111111;
+  --color-muted: #666666;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-cream);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================================================
+   1. HERO BANNER (SLANTED SPLIT SECTION)
+   =================================================== */
+.hero-banner-section {
+  width: 100%;
+  background-color: var(--color-cream);
+  overflow: hidden;
+}
+
+.hero-split-wrapper {
+  display: flex;
+  min-height: 520px;
+  width: 100%;
+}
+
+.hero-left-content {
+  flex: 1;
+  padding: 60px 40px 60px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.hero-tagline {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-dark);
+  margin-bottom: 10px;
+}
+
+.hero-main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--color-dark);
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.gold-text {
+  color: var(--color-gold);
+}
+
+.icon-separator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  max-width: 260px;
+}
+
+.icon-separator .line {
+  flex: 1;
+  height: 1px;
+  background-color: #e0d8c8;
+}
+
+.icon-separator .burger-emoji {
+  font-size: 14px;
+}
+
+.hero-description {
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-red-fill {
+  background-color: var(--color-red);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-red-fill:hover {
+  background-color: var(--color-red-hover);
+  transform: translateY(-2px);
+}
+
+.btn-gold-outline {
+  background-color: var(--color-cream);
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 11.5px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-gold-outline:hover {
+  background-color: var(--color-gold);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.hero-right-visual {
+  flex: 1.2;
+  position: relative;
+  background-color: #0b0b0b;
+  overflow: hidden;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-burger-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===================================================
+   2. HERO FEATURE HIGHLIGHTS BAR
+   =================================================== */
+.hero-features-bar {
+  background-color: #ffffff;
+  padding: 24px 0;
+  border-top: 1px solid #efe8dc;
+  border-bottom: 1px solid #efe8dc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.features-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 12px;
+}
+
+.feature-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #fbf9f5;
+  border: 1px solid #eadecc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover .feature-icon-circle {
+  transform: scale(1.08);
+  background-color: rgba(204, 160, 58, 0.15);
+  border-color: var(--color-gold);
+}
+
+.feature-text h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.feature-text p {
+  font-size: 11px;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ===================================================
+   3. BEST SELLERS SECTION & VIEW ALL
+   =================================================== */
+.best-sellers-section {
+  padding: 60px 0;
+  background-color: var(--color-cream);
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+}
+
+.sub-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-red);
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+/* Enhanced View All Link */
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(204, 160, 58, 0.4);
+  border-radius: 4px;
+  background-color: #ffffff;
+  letter-spacing: 0.5px;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.view-all-link .arrow {
+  transition: transform 0.25s ease;
+}
+
+.view-all-link:hover {
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 12px rgba(204, 160, 58, 0.3);
+  transform: translateY(-2px);
+}
+
+.view-all-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Grid Layout */
+.products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 25px;
+  width: 100%;
+}
+
+.loading-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+  color: var(--color-muted);
+}
+
+/* ===================================================
+   4. RESPONSIVE BREAKPOINTS
+   =================================================== */
+@media (max-width: 991px) {
+  .hero-split-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-left-content {
+    max-width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-main-title {
+    font-size: 48px;
+  }
+
+  .icon-separator {
+    margin: 15px auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-right-visual {
+    height: 320px;
+    clip-path: none;
+  }
+
+  .features-flex-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-main-title {
+    font-size: 38px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-red-fill,
+  .btn-gold-outline {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .features-flex-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .view-all-link {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}

@@ -162,6 +162,18 @@
     color: var(--gold-color);
 }
 
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-links-list li {
+    margin-bottom: 8px;
+}
+
 /* Social Media Icons grid links formatting */
 .footer-socials a {
     color: #ffffff;

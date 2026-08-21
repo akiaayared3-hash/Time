@@ -1,156 +1,411 @@
-/* ==========================================================================
-   Preserved Existing Header Configuration Styles
-   ========================================================================== */
+/* ===============================
+   GLOBAL
+================================ */
+
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   HEADER BASE
+================================ */
 
 .custom-header {
-    border-bottom: 1px solid #1c1c1c;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  width: 100%;
+  background: #050505;
+  border-bottom: 1px solid #222222;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Original Clock Logo Components */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   LOGO
+================================ */
+
 .logo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    text-decoration: none;
-}
-
-.logo-clock-top {
-    width: 36px;
-    height: 18px;
-    border: 2px solid #c59d4f;
-    border-bottom: none;
-    border-top-left-radius: 36px;
-    border-top-right-radius: 36px;
-    position: absolute;
-    top: -10px;
-}
-
-.clock-pin {
-    width: 2px;
-    height: 8px;
-    background-color: #c59d4f;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .logo-title {
-    font-size: 28px;
-    font-weight: 900;
-    color: #ffffff;
-    letter-spacing: 2px;
-    line-height: 1;
-    margin-top: 6px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  line-height: 1;
 }
 
 .logo-subtitle {
-    font-size: 9px;
-    font-weight: 700;
-    color: #c59d4f;
-    letter-spacing: 1.5px;
-    margin-top: 2px;
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 5px;
 }
 
-/* Navigation Links layout styling */
-.custom-nav-links .nav-link {
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 1px;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    transition: color 0.2s ease;
+/* ===============================
+   MOBILE TOGGLE BUTTON
+================================ */
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #d4af37;
+  cursor: pointer;
 }
 
-.custom-nav-links .nav-link:hover, 
-.custom-nav-links .nav-link.active {
-    color: #c59d4f !important;
+/* ===============================
+   DESKTOP NAVIGATION
+================================ */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
-/* Icons and Order Button Base Setup */
-.nav-icon-link {
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.2s ease;
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-icon-link:hover {
-    color: #c59d4f;
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
 }
 
-.header-cart-badge {
-    font-size: 9px;
-    padding: 3px 6px;
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: 0.3s;
 }
 
-.btn-gold {
-    background-color: #c59d4f;
-    color: #ffffff;
-    border: none;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
 }
 
-.btn-gold:hover {
-    background-color: #a8843b;
-    color: #ffffff;
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #d4af37;
 }
 
-/* ==========================================================================
-   New Fixed Search Bar & Account Profile Logic additions
-   ========================================================================== */
-.header-search-container {
-    width: 200px;
+/* ===============================
+   DESKTOP ACTIONS (SEARCH, CART, USER)
+================================ */
+
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.search-input-field {
-    background-color: #111111;
-    border: 1px solid #2d2d2d;
-    border-radius: 20px;
-    color: #ffffff;
-    font-size: 12px;
-    padding: 6px 35px 6px 14px;
+.desktop-actions form {
+  position: relative;
 }
 
-.search-input-field:focus {
-    background-color: #1a1a1a;
-    border-color: #c59d4f;
-    color: #ffffff;
-    box-shadow: none;
+.desktop-actions input {
+  width: 230px;
+  height: 38px;
+  background: #111111;
+  border: 1px solid #333333;
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 0 45px 0 18px;
+  font-size: 13px;
 }
 
-.search-submit-btn {
+.desktop-actions input::placeholder {
+  color: #888888;
+}
+
+.desktop-actions input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.desktop-actions form button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+/* ===============================
+   ICON BUTTONS & CART BADGE
+================================ */
+
+.icon-btn {
+  position: relative;
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: #d4af37;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d4af37;
+  color: #000000;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* ===============================
+   LOGIN BUTTON
+================================ */
+
+.login-btn {
+  background: #d4af37;
+  color: #000000;
+  border: none;
+  padding: 9px 25px;
+  border-radius: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #ffffff;
+}
+
+/* ===============================
+   USER PROFILE & DROPDOWN
+================================ */
+
+.user-box {
+  position: relative;
+}
+
+.profile-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #111111;
+  border: 1px solid #444444;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-btn:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 180px;
+  background: #111111;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1005;
+}
+
+.user-dropdown a,
+.user-dropdown button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.user-dropdown a:hover,
+.user-dropdown button:hover {
+  background: #d4af37;
+  color: #000000;
+}
+
+/* ===============================
+   MOBILE ACTIONS (DEFAULT HIDDEN)
+================================ */
+
+.mobile-actions {
+  display: none;
+}
+
+/* ===============================
+   RESPONSIVE TABLET & MOBILE FIXES
+================================ */
+
+@media (max-width: 991px) {
+  .header-container {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    z-index: 1002;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 1002;
+  }
+
+  /* Floating mobile menu overlay directly beneath header */
+  .nav-menu {
+    display: none;
     position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #888888;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #080808;
+    border: 1px solid #222222;
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    padding: 30px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+  }
+
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 22px;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+    display: block;
+    padding: 8px 0;
+  }
+
+  .desktop-actions {
+    display: none;
+  }
+
+  .logo-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .logo-subtitle {
+    font-size: 8px;
+  }
+
+  /* Position user profile dropdown properly on top bar */
+  .mobile-actions .user-dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 160px;
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    z-index: 1005;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE PHONES (UNDER 576px)
+================================ */
+
+@media (max-width: 576px) {
+  .custom-header {
+    padding: 10px 0;
+  }
+
+  .logo-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .logo-subtitle {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .login-btn {
+    padding: 6px 16px;
     font-size: 12px;
-    cursor: pointer;
-    padding: 0;
-}
+  }
 
-.search-submit-btn:hover {
-    color: #c59d4f;
-}
+  .icon-btn {
+    font-size: 20px;
+  }
 
-
-/* Responsive adjustments */
-@media (max-width: 991.98px) {
-    .mobile-action-group {
-        z-index: 1050;
-    }
+  .mobile-actions {
+    gap: 12px;
+  }
 }

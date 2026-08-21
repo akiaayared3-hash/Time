@@ -1,0 +1,213 @@
+/* ==========================================
+   MY ORDERS PAGE - SEAMLESS DARK THEME
+========================================== */
+
+/* Page Wrapper - Seamlessly matches header & footer background */
+.orders-page-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  background-color: #050505; /* Matches header and footer */
+  color: #ffffff;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  /* Subtle separator line under header */
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.orders-content-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Page Title Section */
+.orders-page-header {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.orders-page-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.orders-page-header p {
+  color: #888888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Orders List Stack */
+.my-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Order Item Card - Stands out cleanly against #050505 */
+.order-item-card {
+  display: grid;
+  grid-template-columns: 55px 2.5fr 1.2fr 1.5fr 140px;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  background: #121212; /* Charcoal card to separate from background */
+  border: 1px solid #222222;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.order-item-card:hover {
+  background: #171717;
+  border-color: #d4af37; /* Premium Gold Accent on Hover */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Icon Container */
+.order-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Details Column */
+.order-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-food-names {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.order-meta-info {
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Price Column */
+.order-price-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.price-label {
+  font-size: 11px;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+/* Status Badge */
+.order-status-col {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.25);
+  color: #2ebd59;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+
+.status-pulse {
+  width: 7px;
+  height: 7px;
+  background-color: #2ebd59;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #2ebd59;
+}
+
+/* Track Order Button */
+.track-btn {
+  width: 100%;
+  padding: 11px 0;
+  background-color: #d4af37;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.track-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Empty Orders Card */
+.no-orders-card {
+  text-align: center;
+  padding: 60px 20px;
+  background: #121212;
+  border: 1px dashed #262626;
+  border-radius: 12px;
+}
+
+.no-orders-card h3 {
+  margin: 16px 0 8px 0;
+  color: #ffffff;
+}
+
+.no-orders-card p {
+  color: #888888;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .order-item-card {
+    grid-template-columns: 50px 1fr 1fr;
+    row-gap: 16px;
+  }
+
+  .order-details-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .orders-page-wrapper {
+    padding: 35px 15px;
+  }
+
+  .order-item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track-btn {
+    width: 100%;
+  }
+}

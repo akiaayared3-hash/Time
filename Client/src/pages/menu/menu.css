@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* PAGE CONTAINER */
+.menu-page-wrapper {
+  padding: 60px 0;
+  background-color: #fbf9f5;
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER STYLES */
+.menu-header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.sub-title {
+  color: #b81d1d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+/* PRODUCTS GRID */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Prevent image/card stretching */
+.products-grid > div {
+  min-width: 0;
+}
+
+.grid-state-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 0;
+  color: #666666;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-page-wrapper {
+    padding: 40px 0;
+  }
+
+  .menu-header {
+    margin-bottom: 25px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

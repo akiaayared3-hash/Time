@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Product Card Main Wrapper
+   ========================================================================== */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eadecc;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.09);
+}
+
+/* ==========================================================================
+   Image Box & Floating Controls
+   ========================================================================== */
+.image-box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #f7f4ef;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .image-box img {
+  transform: scale(1.06);
+}
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 11px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.label-best {
+  background-color: #b81d1d; /* Red label */
+}
+
+.label-hot {
+  background-color: #e67e22; /* Orange label */
+}
+
+.label-default {
+  background-color: #222222;
+}
+
+/* Floating Plus (+) Quick Button */
+.add-quick-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: #b81d1d;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(184, 29, 29, 0.4);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.add-quick-btn:hover {
+  background-color: #961515;
+  transform: scale(1.1);
+}
+
+/* Floating Quantity Counter (- 1 +) */
+.food-item-counter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 30px;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid #eee;
+}
+
+.food-item-counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #b81d1d;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.food-item-counter button:hover {
+  background-color: #961515;
+}
+
+.counter-qty {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Card Content Body
+   ========================================================================== */
+.product-details {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price-tag {
+  white-space: nowrap;
+}
+
+.price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.currency {
+  font-size: 11px;
+  font-weight: 600;
+  color: #b81d1d;
+}
+
+/* Rating Row */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  color: #f1c40f;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.rating-count {
+  font-size: 11px;
+  color: #777777;
+  font-weight: 500;
+}
+
+/* Main Add To Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 11px;
+  background-color: #b81d1d;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #961515;
+}
+
+.add-to-cart-btn.active-in-cart {
+  background-color: #27ae60;
+}
+
+.add-to-cart-btn.active-in-cart:hover {
+  background-color: #219150;
+}
+
+
+/* ADD THIS TO YOUR menu.css OR catagories.css */
+
+.products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 25px;
+  width: 100%;
+}

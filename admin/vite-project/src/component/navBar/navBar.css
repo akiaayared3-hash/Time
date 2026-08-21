@@ -1,0 +1,134 @@
+.admin-navbar {
+    height: 75px;
+    width: 100%;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo section */
+
+.admin-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.admin-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+
+.admin-brand span {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+    color: #1f1f1f;
+}
+
+
+/* Profile */
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.profile-image {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #ffb000;
+}
+
+
+.profile-info h4 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+.profile-info p {
+    margin: 2px 0 0;
+
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Tablet */
+
+@media(max-width:768px){
+
+    .admin-navbar {
+        padding:0 20px;
+    }
+
+
+    .admin-brand span {
+        font-size:18px;
+    }
+
+
+    .profile-info {
+        display:none;
+    }
+
+
+    .admin-logo {
+        width:45px;
+        height:45px;
+    }
+
+
+    .profile-image {
+        width:40px;
+        height:40px;
+    }
+
+}
+
+
+/* Small mobile */
+
+@media(max-width:480px){
+
+    .admin-navbar {
+        height:65px;
+    }
+
+
+    .admin-brand span {
+        display:none;
+    }
+
+
+    .admin-logo {
+        width:40px;
+    }
+
+}
